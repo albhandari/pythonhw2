@@ -74,5 +74,3 @@ def parse_input():
         return calculator(firstNumber, secondNumber, operatorSign)
     return calculator(firstNumber, secondNumber, operatorSign)
 
-
-print(parse_input())
