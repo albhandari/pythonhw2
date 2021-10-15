@@ -46,4 +46,33 @@ def calculator(number1, number2, operator):
     else:
         return False
 
+def parse_input():
+    """
+    Take in user equation and returns the result 
+    
+    This function takes in user's input of preferred
+    equation and returns the arithmetic with the given 
+    operation. First the function finds the first space
+    to locate the first number. Using that it determines 
+    the type of operator along with second number, and inputs 
+    that to calculator().
 
+    Example
+    -------
+    >>> Enter equation: 10 + 11
+    21.0
+
+    """
+    userInput = input('Enter equation: ')
+    firstSpace = userInput.index(' ')
+    firstNumber = int(userInput[0 : firstSpace])
+    secondNumber = int(userInput[firstSpace+3:])
+    operatorSign = userInput[firstSpace+1:firstSpace+2]
+    if(userInput[firstSpace+2: firstSpace+3] != ' '):
+        secondNumber = int(userInput[firstSpace+4:])
+        operatorSign = userInput[firstSpace+1:firstSpace+3]
+        return calculator(firstNumber, secondNumber, operatorSign)
+    return calculator(firstNumber, secondNumber, operatorSign)
+
+
+print(parse_input())
