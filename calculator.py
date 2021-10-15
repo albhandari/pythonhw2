@@ -61,7 +61,6 @@ def parse_input():
     -------
     >>> Enter equation: 10 + 11
     21.0
-
     """
     userInput = input('Enter equation: ')
     firstSpace = userInput.index(' ')
