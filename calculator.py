@@ -31,13 +31,11 @@ def calculator(number1, number2, operator):
     >>> calculator(12, 4.2, *)
     50.400000000000006
     """
-    # if(not(type(number1, int) or type(number1, float)) and not(type(number2, int) or type(number2, float))):
-    #     return False
     if operator == '**':
         return number1 ** number2
-    elif operator == '/' and number2 != 0:
+    elif operator == '/' and number2 != 0: #checking to make sure number does't get divided by 0
         return number1 / number2
-    elif operator == '//' and number2 != 0:
+    elif operator == '//' and number2 != 0: #checking to make sure number does't get divided by 0
         return number1 //number2
     elif operator == '*':
         return number1 * number2
@@ -48,4 +46,4 @@ def calculator(number1, number2, operator):
     else:
         return False
 
-print(calculator(1,2,"-"))
+
