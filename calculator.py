@@ -33,7 +33,9 @@ def calculator(number1, number2, operator):
     """
     # if(not(type(number1, int) or type(number1, float)) and not(type(number2, int) or type(number2, float))):
     #     return False
-    if operator == '/' and number2 != 0:
+    if operator == '**':
+        return number1 ** number2
+    elif operator == '/' and number2 != 0:
         return number1 / number2
     elif operator == '//' and number2 != 0:
         return number1 //number2
