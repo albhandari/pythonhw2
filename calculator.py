@@ -1,5 +1,7 @@
 def calculator(number1, number2, operator):
     """
+
+    
     Perform arithemtic of two numbers
 
     This function basically takes in three inputs, where
